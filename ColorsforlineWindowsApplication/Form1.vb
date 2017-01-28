@@ -48,14 +48,6 @@ Public Class Form1
         SelectBtn(0) = -1
         SelectBtn(1) = -1
 
-        '生日快乐
-        Dim time As DateTimeOffset = DateTimeOffset.Now
-        Dim month As Integer = time.Month
-        Dim day As Integer = time.Day
-        If month = 6 And day = 10 Then
-            Me.Text = "五彩连珠            老妈 生日快乐"
-        End If
-
     End Sub
     Sub savegame()
         WriteINI("board", "score", CflL.score, apppath)
@@ -87,10 +79,10 @@ Public Class Form1
         Refresh()
     End Sub
     Private Sub 关于ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 关于ToolStripMenuItem.Click
-        MsgBox("5/31 v1.0 基本功能可用" & vbCrLf & "5/31晚 v1.1 添加预览下一步颜色功能" & vbCrLf &
-               "6/7 v1.2 完成下一步生成三个随机时不会检查是否已超过或等于五个 以及 分数放入主类中" & vbCrLf &
-               "6/20 v1.3 添加存档功能" & vbCrLf &
-               "7/6 v1.4 棋子图片美化" _
+        MsgBox("15/5/31 v1.0 基本功能可用" & vbCrLf & "15/5/31晚 v1.1 添加预览下一步颜色功能" & vbCrLf &
+               "15/6/7 v1.2 完成下一步生成三个随机时不会检查是否已超过或等于五个 以及 分数放入主类中" & vbCrLf &
+               "15/6/20 v1.3 添加存档功能" & vbCrLf &
+               "15/7/6 v1.4 棋子图片美化" & vbCrLf & "17/1/28 v1.5 因GDI绘图效率低下全面转向网页"_
                , MsgBoxStyle.OkOnly, "关于五彩连珠")
     End Sub
 
